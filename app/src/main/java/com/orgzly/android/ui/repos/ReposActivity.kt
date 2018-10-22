@@ -123,6 +123,10 @@ class ReposActivity :
         activity_repos_directory.setOnClickListener {
             startRepoActivity(R.id.repos_options_menu_item_new_external_storage_directory)
         }
+
+        activity_repos_webdav.setOnClickListener {
+            startRepoActivity(R.id.repos_options_menu_item_new_webdav)
+        }
     }
 
     override fun onCreateContextMenu(menu: ContextMenu?, v: View?, menuInfo: ContextMenu.ContextMenuInfo?) {
@@ -202,6 +206,10 @@ class ReposActivity :
             R.id.repos_options_menu_item_new_external_storage_directory -> {
                 DirectoryRepoActivity.start(this)
                 return
+            }
+
+            R.id.repos_options_menu_item_new_webdav -> {
+                WebDavRepoActivity.start(this)
             }
 
             else -> throw IllegalArgumentException("Unknown repo menu item clicked: $id")

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                             xmlns:app="http://schemas.android.com/apk/res-auto"
+                                             xmlns:tools="http://schemas.android.com/tools"
+                                             android:layout_width="match_parent"
+                                             android:layout_height="match_parent" android:id="@+id/constraintLayout">
+
+    <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:id="@+id/dav_url" android:inputType="textUri"
+            android:hint="@string/webdav_url_hint"
+            app:layout_constraintTop_toTopOf="parent" app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" android:layout_marginTop="15dp"
+            app:layout_constraintHorizontal_bias="0.0"/>
+    <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword"
+            android:ems="10"
+            android:id="@+id/dav_password"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/dav_user" android:layout_marginTop="15dp"
+            android:hint="@string/password_hint"/>
+    <CheckBox
+            android:text="@string/webdav_accept_cert_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/dav_accept_ssl"
+            app:layout_constraintTop_toBottomOf="@+id/dav_password" android:layout_marginTop="15dp"
+            app:layout_constraintLeft_toLeftOf="parent"/>
+    <Button
+            android:text="@string/webdav_test_connection_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/dav_test" app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintHorizontal_bias="0.5" app:layout_constraintEnd_toStartOf="@+id/dav_save"
+            app:layout_constraintHorizontal_chainStyle="spread"
+            app:layout_constraintTop_toBottomOf="@+id/dav_accept_ssl" android:layout_marginTop="15dp"/>
+    <Button
+            android:text="@string/save"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/dav_save"
+            app:layout_constraintStart_toEndOf="@+id/dav_test" app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintTop_toBottomOf="@+id/dav_accept_ssl"
+            android:layout_marginTop="15dp"/>
+    <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:ems="10"
+            tools:layout_editor_absoluteX="31dp" android:id="@+id/dav_user"
+            app:layout_constraintTop_toBottomOf="@+id/dav_url" android:hint="@string/webdav_user_hint"/>
+</android.support.constraint.ConstraintLayout>

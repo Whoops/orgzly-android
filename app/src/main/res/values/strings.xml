@@ -52,6 +52,7 @@
     <string name="nothing">Nothing</string>
     <string name="open">Open</string>
     <string name="widget">Widget</string>
+    <string name="webdav">WebDav</string>
 
     <plurals name="notes_deleted">
         <item quantity="one">Note deleted</item>
@@ -536,5 +537,10 @@
     <string name="hide_all">Hide all</string>
 
     <string name="external_file_no_app_found">No application found to open this file</string>
+    <string name="webdav_url_hint">https://example.com/path/to/org/folder</string>
+    <string name="password_hint">Password</string>
+    <string name="webdav_accept_cert_text">Accept Invalid Certificates</string>
+    <string name="webdav_test_connection_text">Test</string>
+    <string name="webdav_user_hint">Username</string>
 
 </resources>
